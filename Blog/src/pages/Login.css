@@ -1,0 +1,153 @@
+/*------------------------login------------------------*/
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f2f6f9;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 900px;
+  height: 520px;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* LEFT PANEL */
+
+.left-panel {
+  width: 40%;
+  background: linear-gradient(135deg, #3cbfae, #2fae9e);
+  color: #fff;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.left-panel h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.left-panel p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.outline-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.outline-btn:hover {
+  background: #fff;
+  color: #2fae9e;
+}
+
+/* RIGHT PANEL */
+
+.right-panel {
+  width: 60%;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-panel h2 {
+  font-size: 28px;
+  color: #2fae9e;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-icons span {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+}
+
+.small-text {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+form input:focus {
+  border-color: #2fae9e;
+}
+
+.primary-btn {
+  background: #2fae9e;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #279a8c;
+}
+
+.switch-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #2fae9e;
+  cursor: pointer;
+}

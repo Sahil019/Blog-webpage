@@ -1,0 +1,481 @@
+/* ================= DASHBOARD BASE ================= */
+
+.dashboard {
+  background: linear-gradient(180deg, #fff8f2 0%, #ffffff 100%);
+  min-height: 100vh;
+  padding: 56px 40px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 56px;
+  margin-bottom: 48px;
+
+  background: linear-gradient(
+    135deg,
+    #f1f5ff 0%,
+    #e0e7ff 45%,
+    #dbeafe 70%,
+    #eef2ff 100%
+  );
+
+  border-radius: 28px;
+  box-shadow: 0 30px 70px rgba(59, 130, 246, 0.18),
+    0 10px 30px rgba(15, 23, 42, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  line-height: 1.05;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -1.2px;
+  margin-bottom: 14px;
+}
+
+.hero-text h1 span {
+  display: block;
+  background: linear-gradient(90deg, #4f46e5, #6366f1, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #475569;
+  max-width: 520px;
+  margin-left: 10px;
+  margin-bottom: 32px;
+}
+
+.hero-text {
+  margin-left: 6rem;
+}
+
+/* ================= ACTION BAR ================= */
+
+.primary-btn {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.35);
+
+  transition: all 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(79, 70, 229, 0.45);
+}
+
+.search-input {
+  height: 4rem;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  width: 300px;
+  margin-top: 2rem;
+
+  background: white;
+  color: #0f172a;
+
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+.search-wrapper {
+  position: relative;
+  max-width: 260px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 36px 8px 12px; /* right padding for icon */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 68%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none; /* allows clicking input */
+}
+
+/* ================= HERO ICON ================= */
+
+.hero-box {
+  width: 180px;
+  height: 180px;
+  border-radius: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6rem;
+  font-size: 84px;
+
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+
+  color: white;
+
+  box-shadow: 0 30px 60px rgba(99, 102, 241, 0.45);
+
+  transform: rotate(-6deg);
+}
+
+/* ================= HERO ICON ================= */
+
+.hero-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 84px;
+
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+
+  color: white;
+
+  box-shadow: 0 30px 60px rgba(99, 102, 241, 0.45);
+
+  transform: rotate(-6deg);
+}
+
+.hero-text {
+  margin-left: 250px;
+}
+
+/* ================= EDITORIAL HERO ================= */
+
+.editorial-hero {
+  max-width: 1200px;
+  height: 420px;
+  margin: 0 auto 96px;
+  border-radius: 28px;
+  background-size: cover;
+  background-position: center;
+  margin-left: 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.18);
+}
+
+.editorial-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 45%,
+    rgba(0, 0, 0, 0.15) 70%
+  );
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.editorial-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.editorial-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 720px;
+  margin: 14px 0;
+}
+
+.editorial-excerpt {
+  max-width: 560px;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.editorial-cta {
+  margin-top: 26px;
+  background: #ffffff;
+  color: #0f172a;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* ================= SEARCH RESULTS ================= */
+
+.posts-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #0f172a;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 👈 IMPORTANT */
+  gap: 26px;
+}
+
+.post-card-home {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+
+  border-radius: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.post-card-home:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.18);
+}
+
+.post-image {
+  width: 100%;
+  height: 160px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-card-home h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.post-card-home p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ================= STATS ================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  margin-bottom: 96px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h2 {
+  font-size: 42px;
+  color: #ff7a00;
+}
+
+/* ================= POSTS GRID (GLOBAL + DRAFTS) ================= */
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* ================= COMPACT CARD ================= */
+
+.post-card-home {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 56px;
+  max-width: 320px; /* 👈 key line */
+  margin: 0 auto; /* 👈 centers cards nicely */
+}
+
+.post-card-home:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.14);
+}
+
+/* Smaller image */
+.post-image {
+  height: 160px;
+  overflow: hidden;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tight text spacing */
+.post-card-home h3 {
+  margin: 14px 20px 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.post-card-home p {
+  margin: 0 20px 8px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.card-meta {
+  margin: 0 20px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* ================= ACTION BUTTONS (BOTTOM LEFT) ================= */
+
+.post-card-home .actions {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Small premium buttons */
+.edit-btn,
+.delete-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #ff7a00, #ff9500);
+  color: white;
+  box-shadow: 0 6px 14px rgba(255, 122, 0, 0.35);
+}
+
+.edit-btn:hover {
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: #ffffff;
+  color: #ff4757;
+  border: 1.5px solid #ff4757;
+}
+
+.delete-btn:hover {
+  background: #ff4757;
+  color: white;
+}
+
+/* ================= SEARCH ================= */
+
+.search-input {
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  max-width: 300px;
+}
+
+/* ================= LOGOUT ================= */
+
+.logout-section {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.secondary-btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: #ff7a00;
+  color: white;
+  border: none;
+  margin-right: 2.5rem;
+  margin-top: 3.2rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= EMPTY ================= */
+
+.empty {
+  text-align: center;
+  padding: 64px 32px;
+  color: #64748b;
+  font-size: 1.1rem;
+}
