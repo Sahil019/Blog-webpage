@@ -22,6 +22,7 @@ const pool = new Pool({
   },
 });
 
+
 /* ======================= JWT MIDDLEWARE ======================= */
 const verifyToken = (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -156,14 +157,20 @@ app.post("/api/posts", verifyToken, async (req, res) => {
   }
 });
 
-// USER POSTS
+// USER POSTS (DEBUG SAFE)
 app.get("/api/posts", verifyToken, async (req, res) => {
-  const result = await pool.query(
-    "SELECT * FROM posts WHERE user_id=$1 ORDER BY updated_at DESC",
-    [req.user.id]
-  );
-  res.json(result.rows);
+  try {
+    const result = await pool.query(
+      "SELECT * FROM posts WHERE user_id=$1 ORDER BY updated_at DESC",
+      [req.user.id]
+    );
+    res.json(result.rows);
+  } catch (err) {
+    console.error("❌ USER POSTS ERROR:", err);
+    res.status(500).json({ error: "Failed to fetch posts" });
+  }
 });
+
 
 // UPDATE POST
 // UPDATE POST (FIXED)

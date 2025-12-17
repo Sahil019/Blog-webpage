@@ -3,13 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import API_URL from "../config/api";
 
-
-/* ================= IMAGE URL HELPER (SAME AS DASHBOARD) ================= */
+/* ================= IMAGE URL HELPER ================= */
 const resolveImageUrl = (url) => {
   if (!url) return null;
   if (url.startsWith("http")) return url;
-return `${API_URL}${url}`;
-
+  return `${API_URL}${url}`;
 };
 
 export default function Home() {
@@ -17,8 +15,11 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/public/posts`)
-      .then((res) => res.json())
+    fetch(`${API_URL}/api/public/posts`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch public posts");
+        return res.json();
+      })
       .then(setPosts)
       .catch(console.error);
   }, []);
