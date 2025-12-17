@@ -233,6 +233,7 @@ app.get("/api/public/posts", async (_, res) => {
 
     res.json(result.rows);
   } catch (err) {
+     console.error("PUBLIC POSTS ERROR:", err); 
     res.status(500).json({ error: "Failed to fetch public posts" });
   }
 });
