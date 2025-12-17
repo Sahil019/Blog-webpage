@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./PostPreview.css";
+import API_URL from "../config/api";
+
 
 export default function PostPreview() {
   const { slug } = useParams();
@@ -32,9 +34,9 @@ export default function PostPreview() {
 
     const fetchPost = async () => {
       try {
-        const res = await fetch(
-          `http://localhost:5000/api/public/posts/${slug}`
-        );
+const res = await fetch(
+  `${API_URL}/api/public/posts/${slug}`
+);
 
         if (!res.ok) throw new Error("Post not found");
 

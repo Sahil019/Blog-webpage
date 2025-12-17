@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import API_URL from "../config/api";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -35,9 +36,10 @@ export default function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const url = isSignUp
-      ? "http://localhost:5000/api/auth/register"
-      : "http://localhost:5000/api/auth/login";
+const url = isSignUp
+  ? `${API_URL}/api/auth/register`
+  : `${API_URL}/api/auth/login`;
+
 
     const payload = isSignUp
       ? formData

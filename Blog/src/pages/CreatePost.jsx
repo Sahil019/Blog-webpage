@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { createPost, uploadImage } from "../service/posts";
 import { generateAIContent } from "../service/ai";
 import "./CreatePost.css";
+import API_URL from "../config/api";
 
 export default function CreatePostPage() {
   const navigate = useNavigate();

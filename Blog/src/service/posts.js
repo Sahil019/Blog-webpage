@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+import API_URL from "../config/api";
 
 /* ================= AUTH HEADER ================= */
 const authHeader = () => {
@@ -93,7 +93,7 @@ export const uploadImage = async (file) => {
   }
 
   const data = await res.json();
-  return data.imageUrl; // ✅ VERY IMPORTANT
+  return data.imageUrl;
 };
 
 /* ================= PUBLIC POSTS ================= */

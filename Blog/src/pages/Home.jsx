@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
+import API_URL from "../config/api";
+
 
 /* ================= IMAGE URL HELPER (SAME AS DASHBOARD) ================= */
 const resolveImageUrl = (url) => {
   if (!url) return null;
   if (url.startsWith("http")) return url;
-  return `http://localhost:5000${url}`;
+return `${API_URL}${url}`;
+
 };
 
 export default function Home() {
@@ -14,7 +17,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/public/posts")
+    fetch(`${import.meta.env.VITE_API_URL}/api/public/posts`)
       .then((res) => res.json())
       .then(setPosts)
       .catch(console.error);

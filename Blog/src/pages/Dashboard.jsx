@@ -3,12 +3,15 @@ import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import { Search } from "lucide-react";
 import { getPosts, deletePost } from "../service/posts";
+import API_URL from "../config/api";
+
 
 /* ================= IMAGE URL HELPER ================= */
 const resolveImageUrl = (url) => {
   if (!url) return null;
   if (url.startsWith("http")) return url;
-  return `http://localhost:5000${url}`;
+ return `${API_URL}${url}`;
+
 };
 
 export default function DashboardPage() {
@@ -46,7 +49,7 @@ export default function DashboardPage() {
       setPublishedCount(safePosts.filter((p) => p.published).length);
 
       // GLOBAL POSTS
-      const res = await fetch("http://localhost:5000/api/public/posts");
+      const res = await fetch(`${API_URL}/api/public/posts`);
       const global = await res.json();
       const safeGlobal = Array.isArray(global) ? global : [];
 

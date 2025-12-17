@@ -1,7 +1,9 @@
+import API_URL from "../config/api";
+
 export async function generateAIContent(content) {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://localhost:5000/api/ai/generate", {
+  const res = await fetch(`${API_URL}/api/ai/generate`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

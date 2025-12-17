@@ -16,11 +16,10 @@ app.use(express.json());
 
 /* ======================= DATABASE ======================= */
 const pool = new Pool({
-  host: "localhost",
-  user: "postgres",
-  password: process.env.DB_PASSWORD,
-  database: "auth_db",
-  port: 5432,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 /* ======================= JWT MIDDLEWARE ======================= */
@@ -393,6 +392,8 @@ app.delete("/api/comments/:id", verifyToken, async (req, res) => {
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 /* ======================= SERVER ======================= */
-app.listen(5000, () => {
-  console.log("✅ Backend running at http://localhost:5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`✅ Backend running on port ${PORT}`);
 });
